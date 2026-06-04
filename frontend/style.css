@@ -1,0 +1,135 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial;
+}
+
+body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: url('img.jpg') no-repeat center center fixed;
+  background-size: cover;
+}
+
+button{
+  padding:10px;
+}
+
+.wrapper {
+  width: 400px;
+  height: 600px;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  background: transparent;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;   
+  gap: 15px;      
+  padding: 20px 0;
+  color: #ffffff;
+}
+
+.wrapper h1, .wrapper h2 {
+  text-align: center;
+  font-size: 24px;
+  color: #ffffff;
+}
+
+.wrapper .emailBox {
+  width: 300px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;       /* Centers the subscribe button horizontally */
+  gap: 10px;
+  color: #ffffff;
+}
+
+.wrapper .EventBox {
+  width: 100%;
+  height: auto;
+  margin: 20px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* This centers the button horizontally */
+  gap: 10px;
+  color: #ffffff;
+}
+
+.emailBox input {
+  width: 100%;
+  height: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-bottom: 10px;
+  background: transparent;
+  border: none;
+  outline: none;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 40px;
+  align-items: center;
+  text-align: center;
+  color: #ffffff;
+}
+
+.EventBox input {
+  width: 40%;
+  height: 35px;
+  display: flex;
+  gap: 5px;
+  margin-bottom: 10px;
+  background: transparent;
+  border: none;
+  outline: none;
+  border: 2px solid rgba(250, 250, 250, 0.2);
+  border-radius: 40px;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column-reverse;
+  text-align: center;
+  position: relative;
+  color: #ffffff;
+}
+
+.emailBox input::placeholder, 
+.EventBox input::placeholder {
+  color: rgba(255, 255, 255, 0.7); /* Slightly translucent white so it looks like a placeholder */
+  opacity: 1; /* Fixes Firefox opacity override */
+}
+
+.subscribe-btn {
+  width: 30%;
+  height: 40px;
+  background-color: #fff;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  align-self: center;
+}
+.create-event-btn {
+  width: 30%;
+  height: 40px;
+  background-color: #fff;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  align-self: center;
+}
+
+input[type="date"], input[type="time"] {
+  padding-left: 0 45px; 
+}
+
+/* Moves the native browser icon to the left edge */
+input::-webkit-calendar-picker-indicator {
+  position: absolute;
+  left: 15px; /* Adjust this to move it closer/further from the left edge */
+  font-size: 18px; /* Adjust size of the calendar/clock icon */
+  cursor: pointer;
+  filter: invert(1);
+}
