@@ -7,7 +7,7 @@ sns = boto3.client("sns")
 BUCKET_NAME = "event-announcement-website"
 EVENTS_FILE = "events.json"
 
-TOPIC_ARN = "YOUR_SNS_TOPIC_ARN"
+TOPIC_ARN = "arn:aws:sns:ap-southeast-1:312695118485:event-announcements"
 
 
 def lambda_handler(event, context):

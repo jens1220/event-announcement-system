@@ -3,7 +3,7 @@ import boto3
 
 sns = boto3.client("sns")
 
-TOPIC_ARN = "YOUR_SNS_TOPIC_ARN"
+TOPIC_ARN = "arn:aws:sns:ap-southeast-1:312695118485:event-announcements"
 
 
 def lambda_handler(event, context):
