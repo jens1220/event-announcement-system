@@ -148,7 +148,7 @@ async function subscribe() {
 // CREATE EVENT
 // =====================================
 
-async function createEvent() {
+async function createNewEvent() {
 
   const title =
     document
