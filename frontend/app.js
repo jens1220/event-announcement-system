@@ -18,6 +18,7 @@ async function loadEvents() {
       await fetch("events.json");
 
     if (!response.ok) {
+
       throw new Error(
         `Failed to load events.json (${response.status})`
       );
@@ -30,6 +31,14 @@ async function loadEvents() {
       document.getElementById("events");
 
     container.innerHTML = "";
+
+    if (!events.length) {
+
+      container.innerHTML =
+        "<p>No upcoming events.</p>";
+
+      return;
+    }
 
     events.forEach(event => {
 
@@ -54,13 +63,17 @@ async function loadEvents() {
     );
   }
 }
+
+
 // =====================================
 // SUBSCRIBE USER
 // =====================================
+
 async function subscribe() {
 
   const email =
-    document.getElementById("email")
+    document
+      .getElementById("email")
       .value
       .trim();
 
@@ -91,15 +104,16 @@ async function subscribe() {
       }
     );
 
+    const data =
+      await response.json();
+
     if (!response.ok) {
 
       throw new Error(
+        data.error ||
         `API Error ${response.status}`
       );
     }
-
-    const data =
-      await response.json();
 
     console.log(
       "Subscription successful:",
@@ -111,7 +125,8 @@ async function subscribe() {
       "Subscription request sent successfully."
     );
 
-    document.getElementById("email")
+    document
+      .getElementById("email")
       .value = "";
 
   } catch (error) {
@@ -122,10 +137,13 @@ async function subscribe() {
     );
 
     alert(
-      "Subscription failed. Check browser console."
+      error.message ||
+      "Subscription failed."
     );
   }
 }
+
+
 // =====================================
 // CREATE EVENT
 // =====================================
@@ -133,16 +151,19 @@ async function subscribe() {
 async function createEvent() {
 
   const title =
-    document.getElementById("title")
+    document
+      .getElementById("title")
       .value
       .trim();
 
   const date =
-    document.getElementById("date")
+    document
+      .getElementById("date")
       .value;
 
   const time =
-    document.getElementById("time")
+    document
+      .getElementById("time")
       .value;
 
   if (
@@ -178,15 +199,16 @@ async function createEvent() {
       }
     );
 
+    const data =
+      await response.json();
+
     if (!response.ok) {
 
       throw new Error(
+        data.error ||
         `API Error ${response.status}`
       );
     }
-
-    const data =
-      await response.json();
 
     console.log(
       "Event created:",
@@ -198,17 +220,19 @@ async function createEvent() {
       "Event created successfully."
     );
 
-    document.getElementById("title")
+    document
+      .getElementById("title")
       .value = "";
 
-    document.getElementById("date")
+    document
+      .getElementById("date")
       .value = "";
 
-    document.getElementById("time")
+    document
+      .getElementById("time")
       .value = "";
 
-    // Reload event list
-    loadEvents();
+    await loadEvents();
 
   } catch (error) {
 
@@ -218,7 +242,8 @@ async function createEvent() {
     );
 
     alert(
-      "Failed to create event. Check browser console."
+      error.message ||
+      "Failed to create event."
     );
   }
 }
@@ -228,4 +253,7 @@ async function createEvent() {
 // INITIAL PAGE LOAD
 // =====================================
 
-loadEvents();
+document.addEventListener(
+  "DOMContentLoaded",
+  loadEvents
+);
