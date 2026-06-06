@@ -40,16 +40,15 @@ async function loadEvents() {
       return;
     }
 
-    events.forEach(event => {
+    const event = events[0];
 
-      container.innerHTML += `
-        <div class="event-card">
-          <h3>${event.title}</h3>
-          <p><strong>Date:</strong> ${event.date}</p>
-          <p><strong>Time:</strong> ${event.time}</p>
-        </div>
-      `;
-    });
+    container.innerHTML = `
+      <div class="event-card">
+        <h3>${event.title}</h3>
+        <p><strong>Date:</strong> ${event.date}</p>
+        <p><strong>Time:</strong> ${event.time}</p>
+      </div>
+    `;
 
   } catch (error) {
 
