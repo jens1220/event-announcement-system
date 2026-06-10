@@ -15,12 +15,12 @@ async function loadEvents() {
   try {
 
     const response =
-      await fetch("events.json");
+      await fetch(`${API_URL}/events`);
 
     if (!response.ok) {
 
       throw new Error(
-        `Failed to load events.json (${response.status})`
+        `Failed to load events API (${response.status})`
       );
     }
 
