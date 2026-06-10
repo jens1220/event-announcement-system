@@ -3,7 +3,7 @@
 // =====================================
 
 const API_URL =
-  "https://fn8n8emodd.execute-api.ap-southeast-1.amazonaws.com/prod";
+  "https://59wy36l3uk.execute-api.ap-southeast-1.amazonaws.com/prod";
 
 
 // =====================================
