@@ -9,7 +9,7 @@ A notification system that will sent to the Email Users by given time and date.
 - Feature 3: Notification system for the Email Subscription.
 
 ## 🛠️ Installation
-
+# Reminder: Update the API URL, Lambda ARN, and S3 bucket name references in the code to match the resources created for this project. #
 Create a repository in Github then upload your project folder with git commands.
 
 1. Navigate to your folder first before you do the command:
@@ -46,7 +46,7 @@ Create a repository in Github then upload your project folder with git commands.
 4. Create custom pipeline
    - Connect to your github repository
    - Use codebuild for buildspec.yml
-
+   ![image alt](https://github.com/jens1220/event-announcement-system/blob/main/screenshot/CodeBuild.PNG?raw=true)
    ![image alt](https://github.com/jens1220/Space-Website1220/blob/main/screenshot/CP01.PNG?raw=true)
    ![image alt](https://github.com/jens1220/Space-Website1220/blob/main/screenshot/CP02.PNG?raw=true)
    ![image alt](https://github.com/jens1220/Space-Website1220/blob/main/screenshot/CP03.PNG?raw=true)
@@ -87,6 +87,7 @@ Create a repository in Github then upload your project folder with git commands.
    - enable CORS for both
    - In CORS Section Access-Control-Allow-Headers: **Content-Type**
    - also Create event/**GET** and link it to GetEventsLambda
+   - Then click **Deploy API** and name it as prod or name it as your choice
 
    ![image alt](https://github.com/jens1220/Space-Website1220/blob/main/screenshot/API%20GATEWAY.PNG?raw=true).
 
@@ -102,5 +103,6 @@ Create a repository in Github then upload your project folder with git commands.
    - Target: AWS Lambda Invoke > AnnouncementCheckerLambda
    - Allow: Schedule Enable
 12. Test the website now go to **S3**> frontend > index.html > **Below the Object URL** Click the link and try the website
-#Email Notification preview
+![image alt](https://github.com/jens1220/event-announcement-system/blob/main/screenshot/link.PNG?raw=true)
+#Email Notification preview#
 ![image alt](https://github.com/jens1220/Space-Website1220/blob/main/screenshot/Message.PNG?raw=true)
