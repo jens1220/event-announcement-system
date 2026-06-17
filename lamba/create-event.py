@@ -38,7 +38,8 @@ def lambda_handler(event, context):
             {
                 "title": title,
                 "date": date,
-                "time": time
+                "time": time,
+                "announced": False
             }
         ]
 
@@ -48,21 +49,6 @@ def lambda_handler(event, context):
             Key=EVENTS_FILE,
             Body=json.dumps(events, indent=2),
             ContentType="application/json"
-        )
-
-        # Send SNS notification
-        sns.publish(
-            TopicArn=TOPIC_ARN,
-            Subject="New Event Created",
-            Message=f"""
-New Event Announcement
-
-Title: {title}
-
-Date: {date}
-
-Time: {time}
-"""
         )
 
         return {

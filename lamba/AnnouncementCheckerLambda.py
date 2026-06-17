@@ -25,7 +25,9 @@ def lambda_handler(event, context):
         response["Body"].read().decode("utf-8")
     )
 
-    current_time = datetime.now()
+    from datetime import datetime, timedelta
+
+    current_time = datetime.utcnow() + timedelta(hours=8)
 
     updated = False
 
@@ -45,7 +47,7 @@ def lambda_handler(event, context):
                 TopicArn=TOPIC_ARN,
                 Subject="Event Reminder",
                 Message=f"""
-Upcoming Event
+Today's Event
 
 Title: {event_item['title']}
 
