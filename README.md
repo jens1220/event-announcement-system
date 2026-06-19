@@ -1,12 +1,16 @@
 # Event-Announcement-system
 
-A notification system that will sent to the Email Users by given time and date.
+A notification system that will send to the Email Users by given time and date.
 ![image alt](https://github.com/jens1220/Space-Website1220/blob/main/screenshot/Website.PNG?raw=true)
 
-## 🚀 Features
+## 🚀 Features ##
 - Feature 1: Email Subscription with AWS SNS.
 - Feature 2: Event Creation with time and date setup.
 - Feature 3: Notification system for the Email Subscription.
+
+## 🔎 Architecture Overview ##
+
+![image alt](https://github.com/jens1220/event-announcement-system/blob/main/screenshot/AO-EAS.png?raw=true)
 
 ## 🛠️ Installation
 # Reminder: Update the API URL, Lambda ARN, and S3 bucket name references in the code to match the resources created for this project. #
