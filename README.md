@@ -1,7 +1,7 @@
 # Event-Announcement-system
 
 A notification system that will send to the Email Users by given time and date.
-![image alt](https://github.com/jens1220/Space-Website1220/blob/main/screenshot/Website.PNG?raw=true)
+![image alt](https://github.com/jens1220/event-announcement-system/blob/main/screenshot/Website.PNG?raw=true)
 
 ## 🚀 Features ##
 - Feature 1: Email Subscription with AWS SNS.
