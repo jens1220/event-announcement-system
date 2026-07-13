@@ -1,7 +1,7 @@
 # Event-Announcement-system
 
 A notification system that will send to the Email Users by given time and date.
-![image alt](https://github.com/jens1220/Space-Website1220/blob/main/screenshot/Website.PNG?raw=true)
+![image alt](https://github.com/jens1220/event-announcement-system/blob/main/screenshot/Website.PNG?raw=true)
 
 ## 🚀 Features ##
 - Feature 1: Email Subscription with AWS SNS.
@@ -45,17 +45,16 @@ Create a repository in Github then upload your project folder with git commands.
    ```
    - Assign a defualt page in website hosting in properties
 
-   ![image alt](https://github.com/jens1220/Space-Website1220/blob/main/screenshot/S3%20Static%20website.png?raw=true)
+   ![image alt](https://github.com/jens1220/event-announcement-system/blob/main/screenshot/S3%20Static%20website.png?raw=true)
    
 4. Create custom pipeline
    - Connect to your github repository
    - Use codebuild for buildspec.yml
    ![image alt](https://github.com/jens1220/event-announcement-system/blob/main/screenshot/CodeBuild.PNG?raw=true)
-   ![image alt](https://github.com/jens1220/Space-Website1220/blob/main/screenshot/CP01.PNG?raw=true)
-   ![image alt](https://github.com/jens1220/Space-Website1220/blob/main/screenshot/CP02.PNG?raw=true)
-   ![image alt](https://github.com/jens1220/Space-Website1220/blob/main/screenshot/CP03.PNG?raw=true)
-   ![image alt](https://github.com/jens1220/Space-Website1220/blob/main/screenshot/CP04.PNG?raw=true)
-   ![image alt](https://github.com/jens1220/Space-Website1220/blob/main/screenshot/CICD.PNG?raw=true)
+   ![image alt](https://github.com/jens1220/event-announcement-system/blob/main/screenshot/CP01.PNG?raw=true)
+   ![image alt](https://github.com/jens1220/event-announcement-system/blob/main/screenshot/CP02.PNG?raw=true)
+   ![image alt](https://github.com/jens1220/event-announcement-system/blob/main/screenshot/CP03.PNG?raw=true)
+   ![image alt](https://github.com/jens1220/event-announcement-system/blob/main/screenshot/CICD.PNG?raw=true)
    
    - After you establish your website create new file **events.json** and add code
    ```json
@@ -93,7 +92,7 @@ Create a repository in Github then upload your project folder with git commands.
    - also Create event/**GET** and link it to GetEventsLambda
    - Then click **Deploy API** and name it as prod or name it as your choice
 
-   ![image alt](https://github.com/jens1220/Space-Website1220/blob/main/screenshot/API%20GATEWAY.PNG?raw=true).
+   ![image alt](https://github.com/jens1220/event-announcement-system/blob/main/screenshot/API%20GATEWAY.PNG?raw=true)
 
 9. Create Announcement checker Lambda
    - Purpose: Check whether an event should be announced.
@@ -108,5 +107,5 @@ Create a repository in Github then upload your project folder with git commands.
    - Allow: Schedule Enable
 12. Test the website now go to **S3**> frontend > index.html > **Below the Object URL** Click the link and try the website
 ![image alt](https://github.com/jens1220/event-announcement-system/blob/main/screenshot/link.PNG?raw=true)
-#Email Notification preview#
-![image alt](https://github.com/jens1220/Space-Website1220/blob/main/screenshot/Message.PNG?raw=true)
+# Email Notification preview #
+![image alt](https://github.com/jens1220/event-announcement-system/blob/main/screenshot/Message.PNG?raw=true)
